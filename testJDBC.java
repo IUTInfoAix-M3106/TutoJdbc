@@ -5,9 +5,9 @@ import java.sql.*;
 
 public class testJDBC {
 	// Chaine de connexion
-	static final String CONNECT_URL = "jdbc:mysql://localhost:3306/maBD";
-	static final String LOGIN = "monLogin";
-	static final String PASSWORD = "monPaswd";
+	static final String CONNECT_URL = "jdbc:mysql://localhost:3306/gestionPedaBD";
+	static final String LOGIN = "monUser";
+	static final String PASSWORD = "monPassword";
 	// La requete de test
 	static final String req = "SELECT NUM_ET, NOM_ET, PRENOM_ET " +
 	                          "FROM ETUDIANT " +

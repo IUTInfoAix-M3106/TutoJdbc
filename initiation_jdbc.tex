@@ -192,9 +192,18 @@ D'une manière générale, pour traiter un ordre \textsc{Sql} avec JDBC, il faud
 
 Pour illustrer ce propos, nous utiliserons la base de données «~Gestion 
 Pédagogique\footnote{Script de régénération disponible à l'adresse suivante : 
-\url{/commun/nedjar/gestion_peda_oracle.sql} ou \url{/commun/nedjar/gestion_peda_mysql.sql}}~» que vous avez 
-utilisée lors de vos TP de \textsc{Pl/Sql} en début d'année. Le modèle conceptuel des 
-données est rappelé par la figure~\ref{mcd_gestion_peda}.
+\url{https://raw.githubusercontent.com/nedseb/TpJpa/master/gestion_peda_oracle.sql} ou \url{https://raw.githubusercontent.com/nedseb/TpJpa/master/gestion_peda_mysql.sql}}~» que vous avez 
+utilisée lors de vos TP de \textsc{Pl/Sql} en début d'année. 
+
+Si vous souhaitez utiliser \textsc{MySql}, vous devez créer votre base de données avec les commandes suivantes :
+\begin{lstlisting}[language=bash]
+wget https://raw.githubusercontent.com/nedseb/TpJpa/master/gestion_peda_mysql.sql -O ~/net-home/gestion_peda_mysql.sql
+mysql --user=root --password=mysql --execute="create database gestionPedaBD"
+mysql --user=root --password=mysql --execute="grant all privileges on gestionPedaBD.* to monUser@localhost identified by 'monPassword'"
+mysql --user=monUser --password=monPassword gestionPedaBD --execute=" source ~/net-home/gestion_peda_mysql.sql"
+\end{lstlisting}
+
+Le modèle conceptuel des données est rappelé par la figure~\ref{mcd_gestion_peda}.
 
 
 \begin{figure}\centering
@@ -264,22 +273,23 @@ données est rappelé par la figure~\ref{mcd_gestion_peda}.
 \end{figure}
 
 Le programme Java ci-dessous\footnote{Code source disponible à l'adresse suivante : 
-\url{/commun/nedjar/testJDBC.java}} va être utilisé pour illustrer le fonctionnement de chacune 
+\url{https://raw.githubusercontent.com/nedseb/TpJpa/master/testJDBC.java}} va être utilisé pour illustrer le fonctionnement de chacune 
 de ces étapes. L'objectif de ce programme est de récupérer la liste des numéros, noms et prénoms de tous les étudiants 
-habitant à Aix-en-Provence pour l'afficher à l'écran. Cet exemple utilise un driver propre à 
-Oracle. Il faudrait le remplacer par un autre pour utiliser un \textsc{Sgbd} différent.
+habitant à Aix-en-Provence pour l'afficher à l'écran.
 \pagebreak
 \begin{lstlisting}[language=java]
 // Ne pas faire un copier/coller du pdf...
+// Fichier recuperable a l'adresse suivante :https://raw.githubusercontent.com/nedseb/TpJpa/master/testJDBC.java
+
 
 // Importer les classes jdbc
 import java.sql.*;
 
 public class testJDBC {
 	// Chaine de connexion
-	static final String CONNECT_URL = "jdbc:mysql://localhost:3306/maBD";
-	static final String LOGIN = "monLogin";
-	static final String PASSWORD = "monPaswd";
+	static final String CONNECT_URL = "jdbc:mysql://localhost:3306/gestionPedaBD";
+	static final String LOGIN = "monUser";
+	static final String PASSWORD = "monPassword";
 	// La requete de test
 	static final String req = "SELECT NUM_ET, NOM_ET, PRENOM_ET " +
 	                          "FROM ETUDIANT " +
@@ -289,7 +299,7 @@ public class testJDBC {
 		Connection conn = null;
 		try {
 			// Connexion a la base
-			System.out.println("Connexion a " + CONNECT_URL );
+			System.out.println("Connexion a " + CONNECT_URL);
 			conn = DriverManager.getConnection(CONNECT_URL,LOGIN,PASSWORD);
 			System.out.println("Connecte\n");
 			// Creation d'une instruction SQL
