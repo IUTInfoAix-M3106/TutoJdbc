@@ -289,7 +289,7 @@ public class testJDBC {
 		Connection conn = null;
 		try {
 			// Connexion a la base
-			System.out.println("Connexion a " + connectString );
+			System.out.println("Connexion a " + CONNECT_URL );
 			conn = DriverManager.getConnection(CONNECT_URL,LOGIN,PASSWORD);
 			System.out.println("Connecte\n");
 			// Creation d'une instruction SQL
