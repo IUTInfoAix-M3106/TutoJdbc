@@ -152,9 +152,9 @@ L'API JDBC fait partie de Java mais le pilote propre au \textsc{Sgbd-R} Oracle n
 à la base de données située sur \emph{allegro}, il faudra donc ajouter à votre projet le fichier \emph{jar} contenant le pilote 
 adapté. Le prochain paragraphe sera consacré à l'installation de ce fichier à partir de l'IDE Eclipse.
 
-Avant de commencer, récupérez l'un des pilotes à l'adresse suivante : \url{http://allegro/~nedjar/ojdbc14.jar} ou 
-\url{http://allegro/~nedjar/mysql-connector-java-5.1.18-bin.jar}. 
-Placer le fichier dans répertoire \url{~/net-home/tp/tpCas2/}. Puis à partir d'Eclipse, lancez 
+Avant de commencer, récupérez l'un des pilotes dans le repertoire local : \url{/commun/nedjar/ojdbc6.jar} ou 
+\url{/commun/nedjar/mysql-connector-java-5.1.23-bin.jar}. 
+Placer le fichier dans répertoire \url{~/net-home/tp/tpBDA/}. Puis à partir d'Eclipse, lancez 
 l'assistant de création de nouveau projet Java (\texttt{File $\rightarrow$ New $\rightarrow$ Java Project}).
 Après avoir rempli les informations de ce premier écran, validez pour passer au suivant (\emph{cf.} Figure~\ref{capture1}).
 Dans la nouvelle fenêtre, cliquez sur l'onglet \emph{Libraries} (\emph{cf.} Figure~\ref{capture2})
@@ -169,7 +169,7 @@ vous avez un projet java capable d'utiliser JDBC pour interagir avec Oracle.
 
     \subfloat[][Onglet \emph{Libraries} \label{capture3}]{\includegraphics[width=0.48\linewidth]{capture3}}%
     \hfill%
-    \subfloat[][Fenêtre de selection du fichier \url{~/net-home/tp/tpCas2/ojdbc14.jar} \label{capture4}]{\includegraphics[width=0.48\linewidth]{capture4}}%
+    \subfloat[][Fenêtre de selection du fichier \url{~/net-home/tp/tpBDA/ojdbc6.jar} \label{capture4}]{\includegraphics[width=0.48\linewidth]{capture4}}%
     \caption{}
   \end{agrandirmarges}
 \end{figure}
@@ -192,7 +192,7 @@ D'une manière générale, pour traiter un ordre \textsc{Sql} avec JDBC, il faud
 
 Pour illustrer ce propos, nous utiliserons la base de données «~Gestion 
 Pédagogique\footnote{Script de régénération disponible à l'adresse suivante : 
-\url{http://allegro.iut.univ-aix.fr/~nedjar/gestion_peda_oracle.sql} ou \url{http://allegro.iut.univ-aix.fr/~nedjar/gestion_peda_mysql.sql}}~» que vous avez 
+\url{/commun/nedjar/gestion_peda_oracle.sql} ou \url{/commun/nedjar/gestion_peda_mysql.sql}}~» que vous avez 
 utilisée lors de vos TP de \textsc{Pl/Sql} en début d'année. Le modèle conceptuel des 
 données est rappelé par la figure~\ref{mcd_gestion_peda}.
 
@@ -264,14 +264,13 @@ données est rappelé par la figure~\ref{mcd_gestion_peda}.
 \end{figure}
 
 Le programme Java ci-dessous\footnote{Code source disponible à l'adresse suivante : 
-\url{http://allegro.iut.univ-aix.fr/~nedjar/testJDBC.java}} va être utilisé pour illustrer le fonctionnement de chacune 
+\url{/commun/nedjar/testJDBC.java}} va être utilisé pour illustrer le fonctionnement de chacune 
 de ces étapes. L'objectif de ce programme est de récupérer la liste des numéros, noms et prénoms de tous les étudiants 
 habitant à Aix-en-Provence pour l'afficher à l'écran. Cet exemple utilise un driver propre à 
 Oracle. Il faudrait le remplacer par un autre pour utiliser un \textsc{Sgbd} différent.
 \pagebreak
 \begin{lstlisting}[language=java]
 // Ne pas faire un copier/coller du pdf...
-// http://allegro.iut.univ-aix.fr/~nedjar/testJDBC.java
 
 // Importer les classes jdbc
 import java.sql.*;
