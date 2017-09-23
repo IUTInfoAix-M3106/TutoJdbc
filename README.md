@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/IUTInfoAix-M2105/Syllabus/master/assets/logo.png" alt="class logo" class="logo"/> Bases de données avancées 
+#<img src="https://raw.githubusercontent.com/IUTInfoAix-M2105/Syllabus/master/assets/logo.png" alt="class logo" class="logo"/> Bases de données avancées 
 
 ### IUT d’Aix-Marseille – Département Informatique Aix-en-Provence
 
@@ -144,5 +144,5 @@ Gestion des exceptions
 La grande majorité des classes de JDBC sont susceptibles de lever des exceptions lorsqu’elles rencontrent des erreurs. C’est pour cela qu’il faut toujours encadrer le code JDBC par un bloc `try/catch`. Les exceptions levées sont toutes des classes filles de `SQLException`.
 
 ## Question :
-
-Mettre en place un projet TutoJDBC pour tester la classe donnée en exemple. N’oubliez pas de configurer votre base de données pour qu’elle contienne les données nécéssaires. Le fichier java donné en exemple devra être adapté avec les informations vers votre base de données personnelle (nom d'hôte, login, mot de passe).
+Clonner le dépôt `IUTInfoAix-M3106/TutoJdbc` et l'importer dans votre IDE. Le fichier java donné en exemple devra être adapté avec les informations vers votre base de données personnelle (nom d'hôte, login, mot de passe).
+Lancer la classe `TestJDBC` pour vérifier que tout fonctionne. N’oubliez pas de configurer votre base de données pour qu’elle contienne les données nécéssaires. 
