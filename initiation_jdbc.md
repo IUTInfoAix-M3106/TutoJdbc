@@ -1,7 +1,7 @@
 Introduction
 ============
 
-L’objectif de ce document est de vous présenter une méthode d’accès à un <span style="font-variant:small-caps;">Sgbd</span> à travers le langage de programmation Java. Pour cela, nous allons dans un premier temps présenter l’API JDBC (Java DataBase Connectivity)[1]. C’est un ensemble de classes permettant d’exécuter des ordres <span style="font-variant:small-caps;">Sql</span> de manière générique. En effet, l’API JDBC est construit autour de pilotes (Driver) interchangeables. Un pilote est un module logiciel dédié à une source de données (un <span style="font-variant:small-caps;">Sgbd-R</span> dans la plupart des cas). Pour utiliser comme source de données MySQL au lieu d’Oracle, il suffit de de remplacer le pilote Oracle par celui de MySQL. Ce changement de pilote peut se faire directement par paramétrage sans même avoir besoin changer une seule ligne de code ni même le recompiler[2].
+L’objectif de ce document est de vous présenter une méthode d’accès à un **Sgbd** à travers le langage de programmation **Java**. Pour cela, nous allons dans un premier temps présenter l’API JDBC (Java DataBase Connectivity)[1]. C’est un ensemble de classes permettant d’exécuter des ordres <span style="font-variant:small-caps;">Sql</span> de manière générique. En effet, l’API JDBC est construit autour de pilotes (Driver) interchangeables. Un pilote est un module logiciel dédié à une source de données (un <span style="font-variant:small-caps;">Sgbd-R</span> dans la plupart des cas). Pour utiliser comme source de données MySQL au lieu d’Oracle, il suffit de de remplacer le pilote Oracle par celui de MySQL. Ce changement de pilote peut se faire directement par paramétrage sans même avoir besoin changer une seule ligne de code ni même le recompiler[2].
 
 Mise en place de l’environnement de travail
 ===========================================
@@ -179,10 +179,10 @@ La grande majorité des classes de JDBC sont susceptibles de lever des exception
 
 Mettre en place un projet TestJDBC pour tester la classe donnée en exemple. N’oubliez pas de configurer votre base de données pour qu’elle contienne les données nécéssaires.
 
-[1] <http://download.oracle.com/javase/6/docs/technotes/guides/jdbc/>
+[1]:http://download.oracle.com/javase/6/docs/technotes/guides/jdbc/
 
-[2] Il faut tout de même pondérer ces avantages car dans la pratique il existe de très nombreuses incompatibilités liées à des implémentations du langage <span style="font-variant:small-caps;">SQL</span> non respectueuses des standards.
+[2]:Il faut tout de même pondérer ces avantages car dans la pratique il existe de très nombreuses incompatibilités liées à des implémentations du langage <span style="font-variant:small-caps;">SQL</span> non respectueuses des standards.
 
-[3] Script de régénération disponible à l’adresse suivante : <https://raw.githubusercontent.com/nedseb/TpJpa/master/gestion_peda_oracle.sql> ou <https://raw.githubusercontent.com/nedseb/TpJpa/master/gestion_peda_mysql.sql>
+[3]:Script de régénération disponible à l’adresse suivante : <https://raw.githubusercontent.com/nedseb/TpJpa/master/gestion_peda_oracle.sql> ou <https://raw.githubusercontent.com/nedseb/TpJpa/master/gestion_peda_mysql.sql>
 
-[4] Code source disponible à l’adresse suivante : <https://raw.githubusercontent.com/nedseb/TpJpa/master/testJDBC.java>
+[4]:Code source disponible à l’adresse suivante : <https://raw.githubusercontent.com/nedseb/TpJpa/master/testJDBC.java>
