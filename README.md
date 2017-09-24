@@ -1,4 +1,4 @@
-#<img src="https://raw.githubusercontent.com/IUTInfoAix-M2105/Syllabus/master/assets/logo.png" alt="class logo" class="logo"/> Bases de données avancées 
+# <img src="https://raw.githubusercontent.com/IUTInfoAix-M2105/Syllabus/master/assets/logo.png" alt="class logo" class="logo"/> Bases de données avancées 
 
 ### IUT d’Aix-Marseille – Département Informatique Aix-en-Provence
 
