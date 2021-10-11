@@ -139,3 +139,11 @@ La grande majorité des classes de JDBC sont susceptibles de lever des exception
 
 Clonner le dépôt `IUTInfoAix-M3106/TutoJdbc` et l'importer dans votre IDE. Le fichier java donné en exemple devra être adapté avec les informations vers votre base de données personnelle (nom d'hôte, login, mot de passe).
 Lancer la classe `TestJDBC` pour vérifier que tout fonctionne. N’oubliez pas de configurer votre base de données pour qu’elle contienne les données nécéssaires.
+
+### GitHub Codespaces
+Si vous n'êtes pas certain que votre environement est correctement configuré, vous pouvez directement ouvrir le code de ce projet dans l'IDE en ligne mis à disposition par Github. 
+
+Suivez ces étapes pour ouvrir cet exemple dans un Codespaces : 
+- Cliquez sur le menu déroulant Code et sélectionnez l'option Ouvrir avec Codespaces. 
+- Sélectionnez + Nouvel espace de code en bas du volet. 
+Pour plus d'informations, consultez la [documentation GitHub](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace#creating-a-codespace).
