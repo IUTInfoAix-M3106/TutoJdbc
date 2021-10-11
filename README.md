@@ -9,7 +9,7 @@
   - Consulter et/ou créér des [issues](https://github.com/IUTInfoAix-M3106/TutoJdbc/issues).
   - [Email](mailto:sebastien.nedjar@univ-amu.fr) pour une question d'ordre privée, ou pour convenir d'un rendez-vous physique.
 
-## Tutoriel de découverte de JDBC [![Build Status](https://travis-ci.org/IUTInfoAix-M3106/TutoJdbc.svg)](https://travis-ci.org/IUTInfoAix-M3106/TutoJdbc)
+## Tutoriel de découverte de JDBC [![Java CI](https://github.com/IUTInfoAix-M3106/TutoJdbc/actions/workflows/mvn_build.yml/badge.svg)](https://github.com/IUTInfoAix-M3106/TutoJdbc/actions/workflows/mvn_build.yml)
 
 L’objectif de ce document est de vous présenter une méthode d’accès à un `Sgbd-R` à travers le langage de programmation `Java`. Pour cela, nous allons dans un premier temps présenter l’API JDBC ([Java DataBase Connectivity](http://download.oracle.com/javase/6/docs/technotes/guides/jdbc/)). C’est un ensemble de classes permettant d’exécuter des ordres /1 de manière générique. En effet, l’API JDBC est construit autour de pilotes (Driver) interchangeables. Un pilote est un module logiciel dédié à une source de données (un `Sgbd-R` dans la plupart des cas). Pour utiliser comme source de données MySQL au lieu d’Oracle, il suffit de de remplacer le pilote Oracle par celui de MySQL. Ce changement de pilote peut se faire directement par paramétrage sans même avoir besoin changer une seule ligne de code ni même le recompiler (Il faut tout de même pondérer ces avantages car dans la pratique il existe de très nombreuses incompatibilités liées à des implémentations du langage `SQL` non respectueuses des standards).
 
