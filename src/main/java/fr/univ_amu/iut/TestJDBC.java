@@ -1,11 +1,11 @@
-package fr.univ_amu.iut;// Ne pas faire un copier/coller du pdf...
+package fr.univ_amu.iut;
 
 // Importer les classes jdbc
 import java.sql.*;
 
 public class TestJDBC {
 	// Chaine de connexion
-	static final String CONNECT_URL = "jdbc:mysql://localhost:3306/gestionPedaBD";
+	static final String CONNECT_URL = "jdbc:mysql://localhost:3306/GestionPedaBD";
 	static final String LOGIN = "monUser";
 	static final String PASSWORD = "monPassword";
 	// La requete de test
@@ -14,7 +14,7 @@ public class TestJDBC {
 	                          "WHERE VILLE_ET = 'AIX-EN-PROVENCE'";
 
 	public static void main(String[] args) throws SQLException {
-		// Connexion a la base
+		// Connexion a la base de données
 		System.out.println("Connexion a " + CONNECT_URL);
 		try (Connection conn = DriverManager.getConnection(CONNECT_URL,LOGIN,PASSWORD)){
 			System.out.println("Connecte\n");
