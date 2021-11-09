@@ -23,7 +23,7 @@ Par exemple pour pouvoir accéder à une base de donnée MySQL, vous devrez rajo
 <dependency>
    <groupId>mysql</groupId>
    <artifactId>mysql-connector-java</artifactId>
-   <version>8.0.26</version>
+   <version>8.0.27</version>
 </dependency>
 ```
 
@@ -45,14 +45,11 @@ L’objectif général de cette partie est de mettre en évidence le schéma de 
 
 Pour illustrer ce propos, nous utiliserons la base de données « Gestion Pédagogique » que vous avez utilisée lors de vos TP de PL/SQL en début d’année. Dans le présent dépôt, vous pourrez trouver un script de génération des tables adapté à MySQL ou Oracle.
 
-Si vous souhaitez utiliser MySQL, vous devez créer votre base de données. Pour pouvoir travailler avec votre propre base de données, il est conseillé de créer une base de donnée MySQL chez [Always Data](https://www.alwaysdata.com/fr/). Une fois votre base créée, il faudra créer un utilisateur avec les droit de modification et remplir votre base à partir de l'interface PhpMyadmin fournie.
+En créant votre environement de dévelopement avec gitpod, vous aurez accès à un serveur MySQL déjà configuré. Pour pouvoir travailler avec votre propre base de données, vous pouvez essayer de créer une base de donnée MySQL chez [Always Data](https://www.alwaysdata.com/fr/). Une fois votre base créée, il faudra créer un utilisateur avec les droit de modification et remplir votre base à partir de l'interface PhpMyadmin.
 
 Le programme Java ci-dessous va être utilisé pour illustrer le fonctionnement de chacune de ces étapes. L’objectif de ce programme est de récupérer la liste des numéros, noms et prénoms de tous les étudiants habitant à Aix-en-Provence pour l’afficher à l’écran.
 
 ```java
-// Ne pas faire un copier/coller de ce document. 
-// Importez plutôt directement le dépôt dans l'IDE
-
 
 // Importer les classes jdbc
 import java.sql.*;
@@ -136,7 +133,7 @@ La grande majorité des classes de JDBC sont susceptibles de lever des exception
 
 ## Travail à faire
 
-Cloner le dépôt `IUTInfoAix-M3106/TutoJdbc` et l'importer dans votre IDE. Le fichier java donné en exemple devra être adapté avec les informations vers votre base de données personnelle (nom d'hôte, login, mot de passe).
+Cloner le dépôt `IUTInfoAix-M3106/TutoJdbc` et l'importer dans votre IDE (je vous recommande d'utiliser Gitpod pour vous simplifier la configuration de votre projet). Si vous utilisez un server de base de données externe, le fichier java donné en exemple devra être adapté avec les informations vers votre base de données (nom d'hôte, login, mot de passe).
 Lancer la classe `TestJDBC` pour vérifier que tout fonctionne. N’oubliez pas de configurer votre base de données pour qu’elle contienne des données accessible à un utilisateur lambda.
 
 ## Ouvrir votre projet avec Gitpod
